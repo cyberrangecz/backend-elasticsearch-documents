@@ -1,1 +1,1 @@
-1.0.1 Gitlab CI changelog removed since this repo is not the service, test CI.
+1.0.2 Gitlab CI changelog removed since this repo is not the service, test CI.
