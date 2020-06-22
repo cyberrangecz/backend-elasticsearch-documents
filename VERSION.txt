@@ -1,1 +1,1 @@
-1.0.3 Gitlab CI tests phase removed since this repo is just document only.
+1.0.1 Gitlab CI changelog removed since this repo is not a service.
