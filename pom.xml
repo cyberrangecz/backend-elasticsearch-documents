@@ -19,6 +19,7 @@
         <!-- spring for swagger version -->
         <swagger.version>2.9.2</swagger.version>
         <swagger-annotations.version>1.5.22</swagger-annotations.version>
+        <!-- kypo nexus settings -->
         <proprietary-repo-id>kypo-nexus</proprietary-repo-id>
     </properties>
 
