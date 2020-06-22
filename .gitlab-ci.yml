@@ -10,7 +10,6 @@ variables:
 stages:
 - createTag
 - build
-- tests
 - deploy
 
 createTag:
@@ -65,17 +64,6 @@ build:
     - target/$PROJECT_ARTIFACT_ID-*.jar
     expire_in: 1 hour
     when: on_success
-
-tests:
-  stage: tests
-  script:
-  - mvn test -Dproprietary-repo-url=$PROPRIETARY_REPO_URL
-  rules:
-  - if: '$CI_COMMIT_BRANCH == "master"'
-    changes:
-    - $DEPLOYMENT_INFO_VERSION_FILE
-    when: never
-  - if: '$CI_COMMIT_BRANCH'
 
 deploy:
   stage: deploy
