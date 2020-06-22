@@ -47,7 +47,7 @@ createTag:
   rules:
   - if: '$CI_COMMIT_BRANCH == "master"'
     changes:
-    - VERSION.txt
+    - $DEPLOYMENT_INFO_VERSION_FILE
   artifacts:
     paths:
     - ./pom.xml
@@ -73,7 +73,7 @@ tests:
   rules:
   - if: '$CI_COMMIT_BRANCH == "master"'
     changes:
-    - VERSION.txt
+    - $DEPLOYMENT_INFO_VERSION_FILE
     when: never
   - if: '$CI_COMMIT_BRANCH'
 
@@ -91,4 +91,4 @@ deploy:
   rules:
   - if: '$CI_COMMIT_BRANCH == "master"'
     changes:
-    - VERSION.txt
+    - $DEPLOYMENT_INFO_VERSION_FILE
