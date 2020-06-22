@@ -1,1 +1,1 @@
-1.0.1 Gitlab CI for ElasticSearch Documents integrated and all the documents added.
+1.0.2 Gitlab CI tests phase removes since this repo is just document only.
