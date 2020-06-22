@@ -1,0 +1,1 @@
+1.0.1 Gitlab CI for ElasticSearch Documents integrated.
