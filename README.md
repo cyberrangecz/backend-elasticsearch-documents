@@ -1,12 +1,6 @@
 # KYPO Elasticsearch Documents
 This project represents the documents stored in the Elasticsearch instance. It can be used to store or retrieve the data in the Elasticsearch instance in a structured manner.
 
-## Authors
-
-Name          | Email          
-------------- | ------------
-Pavel Šeda    |   441048@mail.muni.cz
-
 ## Usage of This Library
 First, install the project with the command bellow:
 ```
