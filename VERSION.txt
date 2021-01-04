@@ -1,1 +1,1 @@
-1.0.13 Gitlab CI changelog generation updated.
+1.0.14 Refactor ES documents fields.
