@@ -1,3 +1,6 @@
+* 079453f -- Update pom.xml version based on GitLab tag. Done by CI.
+* d07fd80 -- Update VERSION.txt
+* e82cd87 -- CHANGELOG.md file updated with commits between the current and previous tag. Done by CI.
 * 5684c18 -- Update pom.xml version based on GitLab tag. Done by CI.
 * f563350 -- Update VERSION.txt
 *   7fb2d73 -- Merge branch '5-deploy-package-to-gitlab-package-registry-on-new-tag' into 'master'
