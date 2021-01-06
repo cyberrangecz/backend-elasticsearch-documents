@@ -1,3 +1,10 @@
+* 5684c18 -- Update pom.xml version based on GitLab tag. Done by CI.
+* f563350 -- Update VERSION.txt
+*   7fb2d73 -- Merge branch '5-deploy-package-to-gitlab-package-registry-on-new-tag' into 'master'
+|\  
+| * 0a09b0f -- New package is deployed to gitlab package registry.
+|/  
+* 1ebae6a -- CHANGELOG.md file updated with commits between the current and previous tag. Done by CI.
 * 965c71a -- Update pom.xml version based on GitLab tag. Done by CI.
 * c3e84d5 -- Update VERSION.txt
 *   3085c9f -- Merge branch '4-support-events-mapping-from-json-to-java-objects' into 'master'
