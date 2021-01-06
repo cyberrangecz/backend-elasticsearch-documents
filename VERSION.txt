@@ -1,1 +1,1 @@
-1.0.14 Refactor ES documents fields.
+1.0.15 Refactor ES documents fields.
