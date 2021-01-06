@@ -21,7 +21,7 @@
         <swagger.version>2.9.2</swagger.version>
         <swagger-annotations.version>1.5.22</swagger-annotations.version>
         <!-- kypo nexus settings -->
-        <proprietary-repo-id>kypo-nexus</proprietary-repo-id>
+        <proprietary-repo-id>gitlab-maven</proprietary-repo-id>
     </properties>
 
     <repositories>
@@ -30,6 +30,13 @@
             <url>${proprietary-repo-url}</url>
         </repository>
     </repositories>
+
+    <distributionManagement>
+        <repository>
+            <id>gitlab-maven</id>
+            <url>${env.ARTIFACT_REPOSITORY_URL}</url>
+        </repository>
+    </distributionManagement>
 
     <dependencies>
         <dependency>
