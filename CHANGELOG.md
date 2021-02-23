@@ -1,3 +1,18 @@
+* bbb373a -- Update pom.xml version based on GitLab tag. Done by CI.
+* 2ff6e8c -- Update VERSION.txt
+*   51b4b8c -- Merge branch '8-rename-keyword-flag-to-answer-in-adaptive-events' into 'master'
+|\  
+| * 2337f7e -- Resolve "Rename keyword flag to answer in adaptive events"
+|/  
+*   81fbf45 -- Merge branch '7-remove-unused-variables-from-gitlab-ci-yml' into 'master'
+|\  
+| * 6a3cc0f -- Update .gitlab-ci.yml
+|/  
+*   d9a2d79 -- Merge branch '6-create-new-events-supporting-adaptive-trainings' into 'master'
+|\  
+| * 1291a53 -- Resolve "Create new events supporting adaptive trainings"
+|/  
+* 9a602ce -- CHANGELOG.md file updated with commits between the current and previous tag. Done by CI.
 * 079453f -- Update pom.xml version based on GitLab tag. Done by CI.
 * d07fd80 -- Update VERSION.txt
 * e82cd87 -- CHANGELOG.md file updated with commits between the current and previous tag. Done by CI.
