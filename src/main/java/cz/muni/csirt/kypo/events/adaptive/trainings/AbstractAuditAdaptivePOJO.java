@@ -4,13 +4,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonSubTypes;
 import com.fasterxml.jackson.annotation.JsonTypeInfo;
-import cz.muni.csirt.kypo.events.trainings.CorrectFlagSubmitted;
-import cz.muni.csirt.kypo.events.trainings.SolutionDisplayed;
-import cz.muni.csirt.kypo.events.trainings.TrainingRunEnded;
-import cz.muni.csirt.kypo.events.trainings.TrainingRunResumed;
-import cz.muni.csirt.kypo.events.trainings.TrainingRunStarted;
-import cz.muni.csirt.kypo.events.trainings.TrainingRunSurrendered;
-import cz.muni.csirt.kypo.events.trainings.WrongFlagSubmitted;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Getter;
@@ -30,7 +23,7 @@ import lombok.experimental.SuperBuilder;
 @JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.EXISTING_PROPERTY, property = "type", visible = true)
 @JsonSubTypes({
         @JsonSubTypes.Type(value = QuestionnaireAnswers.class, name = "cz.muni.csirt.kypo.events.adaptive.trainings.QuestionnaireAnswers"),
-        @JsonSubTypes.Type(value = CorrectFlagSubmitted.class, name = "cz.muni.csirt.kypo.events.adaptive.trainings.CorrectFlagSubmitted"),
+        @JsonSubTypes.Type(value = CorrectAnswerSubmitted.class, name = "cz.muni.csirt.kypo.events.adaptive.trainings.CorrectAnswerSubmitted"),
         @JsonSubTypes.Type(value = PhaseCompleted.class, name = "cz.muni.csirt.kypo.events.adaptive.trainings.PhaseCompleted"),
         @JsonSubTypes.Type(value = PhaseStarted.class, name = "cz.muni.csirt.kypo.events.adaptive.trainings.PhaseStarted"),
         @JsonSubTypes.Type(value = SolutionDisplayed.class, name = "cz.muni.csirt.kypo.events.adaptive.trainings.SolutionDisplayed"),
@@ -38,7 +31,7 @@ import lombok.experimental.SuperBuilder;
         @JsonSubTypes.Type(value = TrainingRunResumed.class, name = "cz.muni.csirt.kypo.events.adaptive.trainings.TrainingRunResumed"),
         @JsonSubTypes.Type(value = TrainingRunStarted.class, name = "cz.muni.csirt.kypo.events.adaptive.trainings.TrainingRunStarted"),
         @JsonSubTypes.Type(value = TrainingRunSurrendered.class, name = "cz.muni.csirt.kypo.events.adaptive.trainings.TrainingRunSurrendered"),
-        @JsonSubTypes.Type(value = WrongFlagSubmitted.class, name = "cz.muni.csirt.kypo.events.adaptive.trainings.WrongFlagSubmitted")
+        @JsonSubTypes.Type(value = WrongAnswerSubmitted.class, name = "cz.muni.csirt.kypo.events.adaptive.trainings.WrongAnswerSubmitted")
 })
 @SuperBuilder
 @Getter
@@ -59,9 +52,9 @@ public abstract class AbstractAuditAdaptivePOJO {
     @ApiModelProperty(value = "Training run ID.", required = true)
     @JsonProperty(value = "training_run_id", required = true)
     protected long trainingRunId;
-    @ApiModelProperty(value = "The time in particular training run (in particular game).", required = true)
-    @JsonProperty(value = "game_time", required = true)
-    protected long gameTime;
+    @ApiModelProperty(value = "The time in particular training run (in particular training).", required = true)
+    @JsonProperty(value = "training_time", required = true)
+    protected long trainingTime;
     @ApiModelProperty(value = "Training phase ID.", required = true)
     @JsonProperty(value = "phase_id", required = true)
     protected long phaseId;
