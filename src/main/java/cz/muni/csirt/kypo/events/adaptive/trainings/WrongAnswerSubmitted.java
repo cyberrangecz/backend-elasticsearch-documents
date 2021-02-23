@@ -8,24 +8,24 @@ import lombok.*;
 import lombok.experimental.SuperBuilder;
 
 /**
- * The type Wrong flag submitted.
+ * The type Wrong answer submitted.
  */
 @SuperBuilder
 @AllArgsConstructor(access = AccessLevel.PRIVATE)
 @NoArgsConstructor
 @Getter
 @ToString
-@ApiModel(value = "Wrong Flag Submitted", description = "Type of event from trainings.")
+@ApiModel(value = "Wrong Answer Submitted", description = "Type of event from trainings.")
 @JsonRootName(value = "event")
-public class WrongFlagSubmitted extends AbstractAuditAdaptivePOJO {
+public class WrongAnswerSubmitted extends AbstractAuditAdaptivePOJO {
 
     @ApiModelProperty(value = "Training task ID.", required = true)
     @JsonProperty(value = "task_id", required = true)
     private Long taskId;
-    @ApiModelProperty(value = "Flag content.", required = true)
-    @JsonProperty(value = "flag_content", required = true)
-    private String flagContent;
-    @ApiModelProperty(value = "The number of wrong try (indicates the sequence number of the wrong flag).", required = true)
+    @ApiModelProperty(value = "Answer content.", required = true)
+    @JsonProperty(value = "answer_content", required = true)
+    private String answerContent;
+    @ApiModelProperty(value = "The number of wrong try (indicates the sequence number of the wrong answer).", required = true)
     @JsonProperty(value = "count", required = true)
     private int count;
 
