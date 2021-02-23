@@ -1,1 +1,1 @@
-1.0.16 CI packages uploaded to CI builder.
+1.0.17 Wrong flags in adaptive traninings renamed to answers
