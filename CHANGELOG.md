@@ -1,3 +1,7 @@
+* 97679f6 -- Update pom.xml version based on GitLab tag. Done by CI.
+* ac7b56b -- Update VERSION.txt
+* 9ed5e2e -- Delete git
+* 649f779 -- CHANGELOG.md file updated with commits between the current and previous tag. Done by CI.
 * bbb373a -- Update pom.xml version based on GitLab tag. Done by CI.
 * 2ff6e8c -- Update VERSION.txt
 *   51b4b8c -- Merge branch '8-rename-keyword-flag-to-answer-in-adaptive-events' into 'master'
