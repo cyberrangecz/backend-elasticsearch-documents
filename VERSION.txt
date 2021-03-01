@@ -1,1 +1,1 @@
-1.0.18 Flags in adaptive traninings renamed to answers
+1.0.22 Gitlab CI using CSIRT commons-ci
