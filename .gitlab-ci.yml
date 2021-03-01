@@ -17,7 +17,6 @@ create_tag:
     GIT_STRATEGY: clone
   script:
     - source /app/export-tag-vars.sh VERSION.txt
-    - echo $TAG_VERSION && echo $TAG_MESSAGE
     - /app/import-ssh-key.sh
     - /app/prepare-git.sh
     - /app/set-version-java.sh
