@@ -1,8 +1,13 @@
 image: 'maven:3.6.3-jdk-11-slim'
 
+cache:
+  paths:
+    - .m2/repository
+
 variables:
   PROJECT_ARTIFACT_ID: kypo-elasticsearch-documents
   DEPLOYMENT_INFO_VERSION_FILE: VERSION.txt
+  MAVEN_CLI_OPTS: "-Dmaven.repo.local=$CI_PROJECT_DIR/.m2/repository"
 
 stages:
 - create_tag
@@ -34,7 +39,7 @@ create_tag:
 build:
   stage: build
   script:
-  - mvn clean install -DskipTests -Dproprietary-repo-url=$PROPRIETARY_REPO_URL
+  - mvn clean install $MAVEN_CLI_OPTS -DskipTests -Dproprietary-repo-url=$PROPRIETARY_REPO_URL
   rules:
   - if: '$CI_COMMIT_BRANCH'
   artifacts:
@@ -47,7 +52,7 @@ deploy:
   stage: deploy
   image: maven:3.6-jdk-11
   script:
-    - 'mvn deploy -s etc/ci_settings.xml'
+    - 'mvn deploy $MAVEN_CLI_OPTS -s etc/ci_settings.xml'
   rules:
     - if: '$CI_COMMIT_BRANCH == "master"'
       changes:
