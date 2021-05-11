@@ -1,1 +1,1 @@
-1.0.25 Gitlab CI commons, push package to Gitlab CI Registry
+1.0.26 Gitlab CI bugfix
