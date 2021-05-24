@@ -1,1 +1,1 @@
-1.0.26 Gitlab CI bugfix
+1.0.27 fix assessment scores
