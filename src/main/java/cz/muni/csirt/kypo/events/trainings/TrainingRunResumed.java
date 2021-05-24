@@ -19,4 +19,5 @@ import lombok.experimental.SuperBuilder;
 @ApiModel(value = "Training Run Resumed", description = "Type of event from trainings.")
 @JsonRootName(value = "event")
 public class TrainingRunResumed extends AbstractAuditPOJO {
+
 }
