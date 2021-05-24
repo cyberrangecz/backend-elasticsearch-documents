@@ -57,9 +57,12 @@ public abstract class AbstractAuditPOJO {
     @ApiModelProperty(value = "The time in particular training run (in particular game).", required = true)
     @JsonProperty(value = "game_time", required = true)
     protected long gameTime;
-    @ApiModelProperty(value = "Total score of the player in the level.", required = true)
-    @JsonProperty(value = "total_score", required = true)
-    protected int totalScore;
+    @ApiModelProperty(value = "Total score of the player achieved in the game levels.", required = true)
+    @JsonProperty(value = "total_game_level_score", required = true)
+    private int totalGameScore;
+    @ApiModelProperty(value = "Total score of the player achieved in the assessment levels.", required = true)
+    @JsonProperty(value = "total_assessment_level_score", required = true)
+    private int totalAssessmentScore;
     @ApiModelProperty(value = "Actual score of the player in the level.", required = true)
     @JsonProperty(value = "actual_score_in_level", required = true)
     protected int actualScoreInLevel;
