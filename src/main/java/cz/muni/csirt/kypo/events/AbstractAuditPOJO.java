@@ -24,7 +24,8 @@ import lombok.experimental.SuperBuilder;
 @JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.EXISTING_PROPERTY, property = "type", visible = true)
 @JsonSubTypes({
         @JsonSubTypes.Type(value = AssessmentAnswers.class, name = "cz.muni.csirt.kypo.events.trainings.AssessmentAnswers"),
-        @JsonSubTypes.Type(value = CorrectFlagSubmitted.class, name = "cz.muni.csirt.kypo.events.trainings.CorrectFlagSubmitted"),
+        @JsonSubTypes.Type(value = CorrectAnswerSubmitted.class, name = "cz.muni.csirt.kypo.events.trainings.CorrectFlagSubmitted"),
+        @JsonSubTypes.Type(value = CorrectAnswerSubmitted.class, name = "cz.muni.csirt.kypo.events.trainings.CorrectAnswerSubmitted"),
         @JsonSubTypes.Type(value = HintTaken.class, name = "cz.muni.csirt.kypo.events.trainings.HintTaken"),
         @JsonSubTypes.Type(value = LevelCompleted.class, name = "cz.muni.csirt.kypo.events.trainings.LevelCompleted"),
         @JsonSubTypes.Type(value = LevelStarted.class, name = "cz.muni.csirt.kypo.events.trainings.LevelStarted"),
@@ -33,7 +34,8 @@ import lombok.experimental.SuperBuilder;
         @JsonSubTypes.Type(value = TrainingRunResumed.class, name = "cz.muni.csirt.kypo.events.trainings.TrainingRunResumed"),
         @JsonSubTypes.Type(value = TrainingRunStarted.class, name = "cz.muni.csirt.kypo.events.trainings.TrainingRunStarted"),
         @JsonSubTypes.Type(value = TrainingRunSurrendered.class, name = "cz.muni.csirt.kypo.events.trainings.TrainingRunSurrendered"),
-        @JsonSubTypes.Type(value = WrongFlagSubmitted.class, name = "cz.muni.csirt.kypo.events.trainings.WrongFlagSubmitted")
+        @JsonSubTypes.Type(value = WrongAnswerSubmitted.class, name = "cz.muni.csirt.kypo.events.trainings.WrongFlagSubmitted"),
+        @JsonSubTypes.Type(value = WrongAnswerSubmitted.class, name = "cz.muni.csirt.kypo.events.trainings.WrongAnswerSubmitted")
 })
 @SuperBuilder
 @Getter

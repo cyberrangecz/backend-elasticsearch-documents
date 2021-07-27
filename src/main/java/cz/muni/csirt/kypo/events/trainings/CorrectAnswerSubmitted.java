@@ -1,5 +1,6 @@
 package cz.muni.csirt.kypo.events.trainings;
 
+import com.fasterxml.jackson.annotation.JsonAlias;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonRootName;
 import cz.muni.csirt.kypo.events.AbstractAuditPOJO;
@@ -9,7 +10,7 @@ import lombok.experimental.SuperBuilder;
 
 
 /**
- * The type Correct flag submitted.
+ * The type Correct Answer Submitted.
  */
 @SuperBuilder
 @AllArgsConstructor(access = AccessLevel.PRIVATE)
@@ -17,9 +18,10 @@ import lombok.experimental.SuperBuilder;
 @Getter
 @ToString
 @JsonRootName(value = "event")
-public class CorrectFlagSubmitted extends AbstractAuditPOJO {
+public class CorrectAnswerSubmitted extends AbstractAuditPOJO {
 
-    @ApiModelProperty(value = "Flag Content.", required = true)
-    @JsonProperty(value = "flag_content", required = true)
-    private String flagContent;
+    @ApiModelProperty(value = "Answer Content.", required = true)
+    @JsonProperty(value = "answer_content", required = true)
+    @JsonAlias("flag_content")
+    private String answerContent;
 }
