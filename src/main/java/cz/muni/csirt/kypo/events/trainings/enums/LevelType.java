@@ -13,9 +13,9 @@ public enum LevelType {
      */
     ASSESSMENT,
     /**
-     * Game level type.
+     * Training level type.
      */
-    GAME,
+    TRAINING,
     /**
      * Pvp level type.
      */
