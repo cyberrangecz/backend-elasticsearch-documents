@@ -1,9 +1,6 @@
 package cz.muni.csirt.kypo.events;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonPropertyOrder;
-import com.fasterxml.jackson.annotation.JsonSubTypes;
-import com.fasterxml.jackson.annotation.JsonTypeInfo;
+import com.fasterxml.jackson.annotation.*;
 import cz.muni.csirt.kypo.events.trainings.*;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
@@ -56,12 +53,14 @@ public abstract class AbstractAuditPOJO {
     @ApiModelProperty(value = "Training run ID.", required = true)
     @JsonProperty(value = "training_run_id", required = true)
     protected long trainingRunId;
-    @ApiModelProperty(value = "The time in particular training run (in particular game).", required = true)
-    @JsonProperty(value = "game_time", required = true)
-    protected long gameTime;
-    @ApiModelProperty(value = "Total score of the player achieved in the game levels.", required = true)
-    @JsonProperty(value = "total_game_level_score", required = true)
-    private int totalGameScore;
+    @ApiModelProperty(value = "The time in particular training run (in particular training).", required = true)
+    @JsonProperty(value = "training_time", required = true)
+    @JsonAlias("game_time")
+    protected long trainingTime;
+    @ApiModelProperty(value = "Total score of the player achieved in the training levels.", required = true)
+    @JsonProperty(value = "total_training_level_score", required = true)
+    @JsonAlias("total_game_level_score")
+    private int totalTrainingScore;
     @ApiModelProperty(value = "Total score of the player achieved in the assessment levels.", required = true)
     @JsonProperty(value = "total_assessment_level_score", required = true)
     private int totalAssessmentScore;
