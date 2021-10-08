@@ -70,6 +70,9 @@ public abstract class AbstractAuditPOJO {
     @ApiModelProperty(value = "ID for the training run level that is generated when the training definition with levels is created or uploaded.", required = true)
     @JsonProperty(value = "level", required = true)
     protected long level;
+    @ApiModelProperty(value = "Order of the level in the training definition.", required = true)
+    @JsonProperty(value = "level_order", required = true)
+    protected long levelOrder;
     @ApiModelProperty(value = "Id of player in the training run")
     @JsonProperty(value = "user_ref_id")
     protected long userRefId;
