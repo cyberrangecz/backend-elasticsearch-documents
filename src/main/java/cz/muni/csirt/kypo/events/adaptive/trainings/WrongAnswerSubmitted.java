@@ -19,9 +19,6 @@ import lombok.experimental.SuperBuilder;
 @JsonRootName(value = "event")
 public class WrongAnswerSubmitted extends AbstractAuditAdaptivePOJO {
 
-    @ApiModelProperty(value = "Training task ID.", required = true)
-    @JsonProperty(value = "task_id", required = true)
-    private Long taskId;
     @ApiModelProperty(value = "Answer content.", required = true)
     @JsonProperty(value = "answer_content", required = true)
     private String answerContent;

@@ -27,7 +27,4 @@ public class PhaseCompleted extends AbstractAuditAdaptivePOJO {
     @ApiModelProperty(value = "Level title.", required = true)
     @JsonProperty(value = "phase_title", required = true)
     private String phaseTitle;
-    @ApiModelProperty(value = "Training task ID.", required = false)
-    @JsonProperty(value = "task_id", required = false)
-    private Long taskId;
 }
