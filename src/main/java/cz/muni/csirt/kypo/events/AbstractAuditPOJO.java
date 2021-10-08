@@ -67,7 +67,7 @@ public abstract class AbstractAuditPOJO {
     @ApiModelProperty(value = "Actual score of the player in the level.", required = true)
     @JsonProperty(value = "actual_score_in_level", required = true)
     protected int actualScoreInLevel;
-    @ApiModelProperty(value = "Training run level.", required = true)
+    @ApiModelProperty(value = "ID for the training run level that is generated when the training definition with levels is created or uploaded.", required = true)
     @JsonProperty(value = "level", required = true)
     protected long level;
     @ApiModelProperty(value = "Id of player in the training run")
