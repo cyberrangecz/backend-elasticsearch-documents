@@ -58,6 +58,15 @@ public abstract class AbstractAuditAdaptivePOJO {
     @ApiModelProperty(value = "Training phase ID.", required = true)
     @JsonProperty(value = "phase_id", required = true)
     protected long phaseId;
+    @ApiModelProperty(value = "Training phase order.", required = true)
+    @JsonProperty(value = "phase_order", required = true)
+    protected long phaseOrder;
+    @ApiModelProperty(value = "Training task ID.", required = true)
+    @JsonProperty(value = "task_id", required = true)
+    protected long taskId;
+    @ApiModelProperty(value = "Training task order.", required = true)
+    @JsonProperty(value = "task_order", required = true)
+    protected long taskOrder;
     @ApiModelProperty(value = "Id of player in the training run")
     @JsonProperty(value = "user_ref_id")
     protected long userRefId;
