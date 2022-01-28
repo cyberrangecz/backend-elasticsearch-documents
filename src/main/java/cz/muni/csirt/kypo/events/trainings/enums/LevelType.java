@@ -17,6 +17,10 @@ public enum LevelType {
      */
     TRAINING,
     /**
+     * Access level type.
+     */
+    ACCESS,
+    /**
      * Pvp level type.
      */
     PVP;
