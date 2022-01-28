@@ -1,3 +1,4 @@
+1.1.0 Added new type of events - Correct/Wrong passkey submitted.
 1.0.31 Made taskId and taskOrder nullable.
 1.0.30 task id, order and phase order added.
 1.0.29 Level order attribute added.
