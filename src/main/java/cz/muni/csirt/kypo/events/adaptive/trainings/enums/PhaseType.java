@@ -16,4 +16,8 @@ public enum PhaseType {
      * Training phase type.
      */
     TRAINING,
+    /**
+     * Access phase type.
+     */
+    ACCESS
 }

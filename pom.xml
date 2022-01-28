@@ -11,15 +11,12 @@
     <properties>
         <java.version>11</java.version>
         <maven.compiler.version>3.8.1</maven.compiler.version>
-        <maven.surefire.plugin.version>2.22.2</maven.surefire.plugin.version>
         <!-- project encoding settings -->
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-        <!-- lombok -->
         <lombok.version>1.18.12</lombok.version>
-        <!-- spring for swagger version -->
-        <swagger.version>2.9.2</swagger.version>
-        <swagger-annotations.version>1.5.22</swagger-annotations.version>
+        <swagger-annotations.version>1.6.4</swagger-annotations.version>
+        <jackson-core.version>2.13.1</jackson-core.version>
         <!-- kypo nexus settings -->
         <proprietary-repo-id>gitlab-maven</proprietary-repo-id>
     </properties>
@@ -45,10 +42,11 @@
             <version>${swagger-annotations.version}</version>
         </dependency>
         <dependency>
-            <groupId>io.swagger</groupId>
-            <artifactId>swagger-models</artifactId>
-            <version>${swagger-annotations.version}</version>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-annotations</artifactId>
+            <version>${jackson-core.version}</version>
         </dependency>
+
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
@@ -79,14 +77,6 @@
                             <version>${lombok.version}</version>
                         </path>
                     </annotationProcessorPaths>
-                </configuration>
-            </plugin>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-surefire-plugin</artifactId>
-                <version>${maven.surefire.plugin.version}</version>
-                <configuration>
-                    <testFailureIgnore>true</testFailureIgnore>
                 </configuration>
             </plugin>
         </plugins>
