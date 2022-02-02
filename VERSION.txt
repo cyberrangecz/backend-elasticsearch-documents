@@ -1,3 +1,4 @@
+1.1.2 Add missing JSON subtypes to abstract classes.
 1.1.1 Change type of attributes sandboxId and poolId to Long.
 1.1.0 Added new type of events - Correct/Wrong passkey submitted.
 1.0.31 Made taskId and taskOrder nullable.
