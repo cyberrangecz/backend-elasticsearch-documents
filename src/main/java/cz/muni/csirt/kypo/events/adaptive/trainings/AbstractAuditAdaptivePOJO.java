@@ -41,7 +41,7 @@ public abstract class AbstractAuditAdaptivePOJO {
 
     @ApiModelProperty(value = "Sandbox ID.", required = true)
     @JsonProperty(value = "sandbox_id", required = true)
-    protected Long sandboxId;
+    protected String sandboxId;
     @ApiModelProperty(value = "Pool ID.", required = true)
     @JsonProperty(value = "pool_id", required = true)
     protected Long poolId;
