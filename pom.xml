@@ -6,7 +6,7 @@
 
     <groupId>cz.muni.ics.kypo</groupId>
     <artifactId>kypo-elasticsearch-documents</artifactId>
-    <version>2.0.0</version>
+    <version>2.1.0-rc.1</version>
 
     <properties>
         <java.version>17</java.version>
