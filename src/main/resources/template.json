@@ -1,6 +1,6 @@
 {
   "template": "*",
-  "index_patterns": ["kypo*"],
+  "index_patterns": ["crczp*"],
   "mappings": {
     "default": {
       "properties": {
