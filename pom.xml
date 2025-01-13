@@ -18,15 +18,8 @@
         <swagger-annotations.version>1.6.4</swagger-annotations.version>
         <jackson-core.version>2.13.1</jackson-core.version>
         <!-- kypo nexus settings -->
-        <proprietary-repo-id>gitlab-maven</proprietary-repo-id>
+        <proprietary-repo-id>github</proprietary-repo-id>
     </properties>
-
-    <repositories>
-        <repository>
-            <id>${proprietary-repo-id}</id>
-            <url>${proprietary-repo-url}</url>
-        </repository>
-    </repositories>
 
     <distributionManagement>
         <repository>
