@@ -14,7 +14,7 @@
         <!-- project encoding settings -->
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-        <lombok.version>1.18.22</lombok.version>
+        <lombok.version>1.18.36</lombok.version>
         <swagger-annotations.version>1.6.4</swagger-annotations.version>
         <jackson-core.version>2.13.1</jackson-core.version>
         <!-- kypo nexus settings -->
