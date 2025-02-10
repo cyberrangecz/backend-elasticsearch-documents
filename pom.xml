@@ -8,7 +8,7 @@
     <artifactId>elasticsearch-documents</artifactId>
     <name>CyberRangeCZ Platform Elasticsearch Documents</name>
     <description>Backend handling events logging via elasticsearch</description>
-    <version>1.0.0</version>
+    <version>0.0.1</version>
 
     <properties>
         <java.version>17</java.version>
