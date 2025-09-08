@@ -14,7 +14,7 @@ on:
         required: true
         default: "no"
 env:
-  MAVEN_CLI_OPTS: "-q -s etc/ci_settings.xml -Dmaven.repo.local=${{ github.workspace }}/.m2/repository"
+  MAVEN_CLI_OPTS: "-s etc/ci_settings.xml -Dmaven.repo.local=${{ github.workspace }}/.m2/repository"
   MAVEN_PUSH_USER: ${{ vars.MAVEN_PUSH_USER}}
   MAVEN_PUSH_TOKEN: ${{ secrets.MAVEN_PUSH_TOKEN }}
   NVD_API_TOKEN: ${{ secrets.NVD_API }}
