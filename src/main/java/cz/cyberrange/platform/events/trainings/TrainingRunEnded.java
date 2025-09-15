@@ -3,27 +3,29 @@ package cz.cyberrange.platform.events.trainings;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonRootName;
 import cz.cyberrange.platform.events.AbstractAuditPOJO;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
-import lombok.*;
+import io.swagger.v3.oas.annotations.media.Schema;
+import lombok.AccessLevel;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.ToString;
 import lombok.experimental.SuperBuilder;
 
-/**
- * The type Training run ended.
- */
+/** The type Training run ended. */
 @SuperBuilder
 @AllArgsConstructor(access = AccessLevel.PRIVATE)
 @NoArgsConstructor
 @Getter
 @ToString
-@ApiModel(value = "Training Run Ended", description = "Type of event from trainings.")
-@JsonRootName(value = "event")
+@Schema(name = "Training Run Ended", description = "Type of event from trainings.")
+@JsonRootName("event")
 public class TrainingRunEnded extends AbstractAuditPOJO {
 
-    @ApiModelProperty(value = "Training run start time.", required = true)
-    @JsonProperty(value = "start_time", required = true)
-    private long startTime;
-    @ApiModelProperty(value = "Training run end time.", required = true)
-    @JsonProperty(value = "end_time", required = true)
-    private long endTime;
+  @Schema(description = "Training run start time.", requiredMode = Schema.RequiredMode.REQUIRED)
+  @JsonProperty(value = "start_time", required = true)
+  private long startTime;
+
+  @Schema(description = "Training run end time.", requiredMode = Schema.RequiredMode.REQUIRED)
+  @JsonProperty(value = "end_time", required = true)
+  private long endTime;
 }

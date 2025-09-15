@@ -35,7 +35,7 @@ jobs:
       - name: Set up Java
         uses: actions/setup-java@v4
         with:
-          java-version: '17'
+          java-version: '21'
           distribution: 'adopt'
           gpg-private-key: ${{ secrets.MAVEN_GPG_PRIVATE_KEY }}
           cache: 'maven'
@@ -54,7 +54,7 @@ jobs:
       - name: Set up Java
         uses: actions/setup-java@v4
         with:
-          java-version: '17'
+          java-version: '21'
           distribution: 'adopt'
           gpg-private-key: ${{ secrets.MAVEN_GPG_PRIVATE_KEY }}
           cache: 'maven'
@@ -70,7 +70,7 @@ jobs:
         run: |
           mvn -ntp clean deploy -DskipTests -DskipChecks=true  $MAVEN_CLI_OPTS
 
- # Controls if version consistent with semver and higner than last git tag.
+  # Controls if version consistent with server and higher than last git tag.
   control_tag:
     if: github.event.pull_request.base.ref == 'master' || github.ref == 'refs/heads/master'
     needs: get_current_version
@@ -80,7 +80,7 @@ jobs:
 
   # Push tag only from manual workflow_dispatch with confirmed tag creation
   push_tag:
-    needs: [get_current_version, control_tag, deploy_maven]
+    needs: [ get_current_version, control_tag, deploy_maven ]
     uses: cyberrangecz/actions-templates/.github/workflows/tag_push_template.yml@master
     with:
       VERSION: ${{ needs.get_current_version.outputs.version }}
