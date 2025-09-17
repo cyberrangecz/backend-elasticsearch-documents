@@ -27,6 +27,7 @@ jobs:
 
   deploy_maven:
     runs-on: ubuntu-24.04
+    needs: get_current_version
     steps:
       - name: Check out code
         uses: actions/checkout@v4
