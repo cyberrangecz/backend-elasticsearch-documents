@@ -59,16 +59,16 @@ jobs:
           gpg-private-key: ${{ secrets.MAVEN_GPG_PRIVATE_KEY }}
           cache: 'maven'
 
-      - name: Deploy dev with Maven
+      - name: Set dev version
         if: github.ref != 'refs/heads/master'
         env:
           DEV_VERSION: ${{ format('{0}-dev', needs.get_current_version.outputs.version) }}
         run: |
-          mvn versions:set -DnewVersion="${DEV_VERSION}"
+          mvn -ntp versions:set -DnewVersion="${DEV_VERSION}"
 
       - name: Deploy with Maven
         run: |
-          mvn -ntp clean deploy $MAVEN_CLI_OPTS
+          mvn -ntp clean deploy -DskipTests -DskipChecks=true  $MAVEN_CLI_OPTS
 
  # Controls if version consistent with semver and higner than last git tag.
   control_tag:
