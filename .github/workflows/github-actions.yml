@@ -45,7 +45,7 @@ jobs:
           mvn -ntp clean install $MAVEN_CLI_OPTS
 
   deploy_maven:
-    needs: build_maven
+    needs: [build_maven, get_current_version]
     runs-on: ubuntu-24.04
     steps:
       - name: Check out code
