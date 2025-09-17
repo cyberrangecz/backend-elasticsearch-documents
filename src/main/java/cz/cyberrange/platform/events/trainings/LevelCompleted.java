@@ -4,25 +4,25 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonRootName;
 import cz.cyberrange.platform.events.AbstractAuditPOJO;
 import cz.cyberrange.platform.events.trainings.enums.LevelType;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
-import lombok.*;
+import io.swagger.v3.oas.annotations.media.Schema;
+import lombok.AccessLevel;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.ToString;
 import lombok.experimental.SuperBuilder;
 
-
-/**
- * The type Level completed.
- */
+/** The type Level completed. */
 @SuperBuilder
 @AllArgsConstructor(access = AccessLevel.PRIVATE)
 @NoArgsConstructor
 @Getter
 @ToString
-@ApiModel(value = "Level Completed", description = "Type of event from trainings.")
-@JsonRootName(value = "event")
+@Schema(name = "Level Completed", description = "Type of event from trainings.")
+@JsonRootName("event")
 public class LevelCompleted extends AbstractAuditPOJO {
 
-    @ApiModelProperty(value = "Level Type.", required = true)
-    @JsonProperty(value = "level_type", required = true)
-    private LevelType levelType;
+  @Schema(description = "Level Type.", requiredMode = Schema.RequiredMode.REQUIRED)
+  @JsonProperty(value = "level_type", required = true)
+  private LevelType levelType;
 }
