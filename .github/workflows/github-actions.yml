@@ -25,27 +25,7 @@ jobs:
     with:
       file_path: "pom.xml"
 
-  build_maven:
-    if: github.event_name != 'pull_request'
-    runs-on: ubuntu-24.04
-    steps:
-      - name: Check out code
-        uses: actions/checkout@v4
-
-      - name: Set up Java
-        uses: actions/setup-java@v4
-        with:
-          java-version: '17'
-          distribution: 'adopt'
-          gpg-private-key: ${{ secrets.MAVEN_GPG_PRIVATE_KEY }}
-          cache: 'maven'
-
-      - name: Build with Maven
-        run: |
-          mvn -ntp clean install $MAVEN_CLI_OPTS
-
   deploy_maven:
-    needs: build_maven
     runs-on: ubuntu-24.04
     steps:
       - name: Check out code
