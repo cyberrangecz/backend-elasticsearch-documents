@@ -8,7 +8,7 @@
     <artifactId>crczp-elasticsearch-documents</artifactId>
     <name>CyberRangeCZ Platform Elasticsearch Documents</name>
     <description>Backend handling events logging via elasticsearch</description>
-    <version>1.0.1</version>
+    <version>1.2.0</version>
 
     <url>https://github.com/cyberrangecz/backend-elasticsearch-documents</url>
     <scm>
@@ -160,6 +160,8 @@
                 <!-- later need to set score -->
                 <failBuildOnCVSS>11</failBuildOnCVSS>
                 <nvdApiKey>${env.NVD_API_TOKEN}</nvdApiKey>
+                <dataDirectory>${env.NVD_DATA_DIR}</dataDirectory>
+                <ossIndexServerId>ossindex</ossIndexServerId>
             </configuration>
             <executions>
                 <execution>
