@@ -72,7 +72,7 @@ jobs:
       - name: Set dev version
         if: github.ref != 'refs/heads/master'
         env:
-          DEV_VERSION: ${{ format('{0}-dev', needs.get_current_version.outputs.version) }}
+          DEV_VERSION: ${{ format('{0}-dev-{1}', needs.get_current_version.outputs.version, github.sha) }}
         run: |
           mvn -ntp versions:set -DnewVersion="${DEV_VERSION}"
 
