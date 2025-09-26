@@ -69,10 +69,15 @@ jobs:
           gpg-private-key: ${{ secrets.MAVEN_GPG_PRIVATE_KEY }}
           cache: 'maven'
 
+      - name: Get the short SHA
+        if: github.ref != 'refs/heads/master'
+        id: short_sha
+        run: echo "sha_short=$(git rev-parse --short HEAD)" >> $GITHUB_OUTPUT
+
       - name: Set dev version
         if: github.ref != 'refs/heads/master'
         env:
-          DEV_VERSION: ${{ format('{0}-dev-{1}', needs.get_current_version.outputs.version, github.sha) }}
+          DEV_VERSION: ${{ format('{0}-dev-{1}', needs.get_current_version.outputs.version, steps.short_sha.outputs.sha_short) }}
         run: |
           mvn -ntp versions:set -DnewVersion="${DEV_VERSION}"
 
