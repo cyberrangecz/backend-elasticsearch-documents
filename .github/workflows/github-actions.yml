@@ -44,7 +44,7 @@ jobs:
 
       - name: Build with Maven
         run: |
-          mvn -ntp clean install $MAVEN_CLI_OPTS -s .github/workflows/settings.xml
+          mvn -ntp clean install $MAVEN_CLI_OPTS
 
   deploy_maven:
     needs: [build_maven, get_current_version]
